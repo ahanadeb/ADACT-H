@@ -2,6 +2,13 @@
 ========================
 This repository contains the implementation of this [paper](https://openreview.net/forum?id=EW6bNEqalF&nesting=2&sort=date-desc). 
 
+Setup:
+```python 
+#implemntation of script found in run.py
+pip install -r requirements.txt
+
+```
+
 Usage:
 ```python 
 #implemntation of script found in run.py

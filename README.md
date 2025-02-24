@@ -4,7 +4,7 @@ This repository contains the implementation of this [paper](https://openreview.n
 
 Setup:
 ```python 
-#implemntation of script found in run.py
+#install requirements
 pip install -r requirements.txt
 
 ```

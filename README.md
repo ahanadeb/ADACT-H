@@ -1,6 +1,6 @@
 ﻿ADACT-L
 ========================
-This repository contains the implementation of this [paper](https://arxiv.org/abs/2409.02747). 
+This repository contains the implementation of this [paper](https://openreview.net/forum?id=EW6bNEqalF&nesting=2&sort=date-desc). 
 
 Usage:
 ```python 
@@ -29,11 +29,12 @@ The CMS-based approach removes the need for naïve counting and alleviates the m
 
 ```commandline
 @inproceedings{
-deb2024tractable,
-title={Tractable Offline Learning of Regular Decision Processes},
+deb2025offline,
+title={Offline {RL} in Regular Decision Processes: Sample Efficiency via Language Metrics},
 author={Ahana Deb and Roberto Cipollone and Anders Jonsson and Alessandro Ronca and Mohammad Sadegh Talebi},
-booktitle={Seventeenth European Workshop on Reinforcement Learning},
-year={2024},
-url={https://openreview.net/forum?id=8RAhqQTGI5}
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=EW6bNEqalF}
+}
 }
 ```

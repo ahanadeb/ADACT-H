@@ -4,7 +4,7 @@ import numpy as np
 from src.utils_pdfa.renderRDP import render
 import sys
 from src.utils_pdfa.RDP_utils import getTrptrp
-
+from src.utils_pdfa.save_to_json import save_json
 
 def main():
     H = int(sys.argv[2])
@@ -37,6 +37,7 @@ def main():
     savefile = "/graphs/" + sys.argv[1] + sys.argv[2] +"_K_"+ str(K)
     graph.render("." + savefile)
     print("Graph saved at: ", savefile+".svg")
+    save_json(RDP,sys.argv)
 
 
 

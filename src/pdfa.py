@@ -4,6 +4,7 @@ class PDFA:
         self.transitions = []
         self.name_counter = 1
         self.states = []
+        self.states.append(q0)
 
     def get_name(self):
         name = "q" + str(self.name_counter)

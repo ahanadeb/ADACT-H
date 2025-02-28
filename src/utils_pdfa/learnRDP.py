@@ -1,5 +1,6 @@
 from src.utils_pdfa.RDP_utils import *
 from src.pdfa import PDFA
+
 def learnRDP(H, thres):
     q0 = RDPState("q0")
     pdfa = PDFA(q0)

@@ -9,7 +9,25 @@ pip install -r requirements.txt
 
 ```
 
-Usage:
+**Usage:** <br>
+
+Tmaze:
+
+You can plot the time (in seconds) for increasing the T-maze corridor
+length using the following script:
+```python 
+#implemntation of script found in tmaze.py
+python tmaze.py [l_min] [l_max] -l
+
+```
+where `l_min` nad `l_max` are the minimum and maximum lengths of the 
+corridor of the T-maze needed to be plotted. The last parameter
+can be set to `-n` or `-l` to display a normal or logarithmic graph, respectively.
+![result](graphs/normal.png)
+![result](graphs/log.png)
+
+
+Other environments:
 ```python 
 #implemntation of script found in run.py
 python run.py [env name] H K threshold

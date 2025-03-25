@@ -1,21 +1,22 @@
 from src.utils_pdfa.test import RDPState, simTMaze
-from src.utils_pdfa.learnRDP import learnRDP
+from src.utils_pdfa.learn_loops_RDP import learn_loops_RDP
 import numpy as np
 from src.utils_pdfa.renderRDP import render
 import sys
 from src.utils_pdfa.RDP_utils import getTrptrp
 from src.utils_pdfa.save_to_json import save_json
-
+from env.Cookie.cookie_test import get_env
 def main():
     H = int(sys.argv[2])
     K = int(sys.argv[3])
     thres = float(sys.argv[4])
+    get_env(K,H)
 
-    print("env/"+sys.argv[1]+"/"+ sys.argv[1]  + '.POMDP')
+    #print("env/"+sys.argv[1]+"/"+ sys.argv[1]  + '.POMDP')
 
-    RDPState.Data = simTMaze("env/"+sys.argv[1]+"/" + sys.argv[1] + '.POMDP', K, H)
+    #RDPState.Data = simTMaze("env/"+sys.argv[1]+"/" + sys.argv[1] + '.POMDP', K, H)
+    RDPState.Data = get_env(K, H)
     print(RDPState.Data)
-    brek
 
     RDPState.Act = np.array([[set(RDPState.Data[i][j][0]) for j in range(H + 1)] for i in range(K)])
     RDPState.Obs = np.array([[set(RDPState.Data[i][j][1]) for j in range(H + 1)] for i in range(K)])
@@ -31,7 +32,7 @@ def main():
         RDPState.Trp[:, H - 1 - j] = [RDPState.Trp[i, H - 1 - j].union(RDPState.Trp[i, H - j]) for i in range(K)]
         RDPState.Trptrp[:, H - 1 - j] = [RDPState.Trptrp[i, H - 1 - j].union(RDPState.Trptrp[i, H - j]) for i in range(K)]
 
-    RDP = learnRDP(H, thres)
+    RDP = learn_loops_RDP(H, thres)
     print("State space: ", len(RDP.states))
 
     graph = render(RDP)

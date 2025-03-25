@@ -1,8 +1,12 @@
 
 import itertools
 import numpy as np
+import warnings
+
+
 
 class Simulator(object):
+
     def __init__(self, env):
         """
         Expected attributes in env:

@@ -36,6 +36,7 @@ def test_distinct(q1, q2, H, thres):
     return True
 
 
+
 def get_probability(aor, q_tr):
     p = np.where(q_tr[:, 0] == aor)[0]
     if len(p) == 0:
@@ -73,3 +74,5 @@ def getTrptrp(RDPState):
         arr.append({n})
         Trptrp.append(arr)
     return np.array(Trptrp)
+
+

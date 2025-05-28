@@ -71,8 +71,10 @@ class Simulator(object):
             state = np.random.choice(self.states, p=self.start)
         else:
             state = np.random.choice(self.states)
+        # print("eeregr", state, self.states) #added for cheese
+        # brek
         self.curr_state = self.states.index(state)
-
+        # self.curr_state = 0
     def num_states(self):
         return len(self.states)
 

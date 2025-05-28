@@ -1,22 +1,24 @@
-from src.utils_pdfa.test import RDPState, simTMaze
+from src.utils_pdfa.RDPState import RDPState, simTMaze
 from src.utils_pdfa.learn_loops_RDP import learn_loops_RDP
 import numpy as np
 from src.utils_pdfa.renderRDP import render
 import sys
 from src.utils_pdfa.RDP_utils import getTrptrp
 from src.utils_pdfa.save_to_json import save_json
-from env.Cookie.cookie_test import get_env
+from src.utils_pdfa.test_solve import *
 def main():
     H = int(sys.argv[2])
     K = int(sys.argv[3])
     thres = float(sys.argv[4])
-    get_env(K,H)
 
     #print("env/"+sys.argv[1]+"/"+ sys.argv[1]  + '.POMDP')
 
-    #RDPState.Data = simTMaze("env/"+sys.argv[1]+"/" + sys.argv[1] + '.POMDP', K, H)
-    RDPState.Data = get_env(K, H)
+    RDPState.Data = simTMaze("env/"+sys.argv[1]+"/" + sys.argv[1] + '.POMDP', K, H)
+
+    #RDPState.Data = get_env(K, H)
+
     print(RDPState.Data)
+    print(type(RDPState.Data))
 
     RDPState.Act = np.array([[set(RDPState.Data[i][j][0]) for j in range(H + 1)] for i in range(K)])
     RDPState.Obs = np.array([[set(RDPState.Data[i][j][1]) for j in range(H + 1)] for i in range(K)])
@@ -34,12 +36,13 @@ def main():
 
     RDP = learn_loops_RDP(H, thres)
     print("State space: ", len(RDP.states))
-
+    solve_mdp(RDP)
     graph = render(RDP)
     savefile = "/graphs/" + sys.argv[1] + sys.argv[2] +"_K_"+ str(K)
     graph.render("." + savefile)
     print("Graph saved at: ", savefile+".svg")
     save_json(RDP,sys.argv)
+    print(RDP.transitions)
 
 
 

@@ -1,0 +1,319 @@
+{
+	"nodes": [
+		{
+			"id": "q0",
+			"ix": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]",
+			"source": "None"
+		},
+		{
+			"id": "q1",
+			"ix": "[3, 4, 6, 2, 7]",
+			"source": "q0"
+		},
+		{
+			"id": "q2",
+			"ix": "[9, 2, 7]",
+			"source": "q0"
+		},
+		{
+			"id": "q3",
+			"ix": "[0, 5]",
+			"source": "q0"
+		},
+		{
+			"id": "q4",
+			"ix": "[8]",
+			"source": "q0"
+		},
+		{
+			"id": "q5",
+			"ix": "[1]",
+			"source": "q0"
+		},
+		{
+			"id": "q6",
+			"ix": "[3]",
+			"source": "q1"
+		},
+		{
+			"id": "q13",
+			"ix": "[8]",
+			"source": "q4"
+		},
+		{
+			"id": "q14",
+			"ix": "[1]",
+			"source": "q5"
+		},
+		{
+			"id": "q15",
+			"ix": "[3]",
+			"source": "q6"
+		},
+		{
+			"id": "q16",
+			"ix": "[8]",
+			"source": "q13"
+		},
+		{
+			"id": "q17",
+			"ix": "[1]",
+			"source": "q14"
+		},
+		{
+			"id": "q18",
+			"ix": "[3]",
+			"source": "q15"
+		},
+		{
+			"id": "q19",
+			"ix": "[8]",
+			"source": "q16"
+		},
+		{
+			"id": "q20",
+			"ix": "[1]",
+			"source": "q17"
+		},
+		{
+			"id": "q21",
+			"ix": "[3]",
+			"source": "q18"
+		},
+		{
+			"id": "q22",
+			"ix": "[8]",
+			"source": "q19"
+		},
+		{
+			"id": "q23",
+			"ix": "[1]",
+			"source": "q20"
+		},
+		{
+			"id": "q24",
+			"ix": "[3]",
+			"source": "q21"
+		},
+		{
+			"id": "q25",
+			"ix": "[8]",
+			"source": "q22"
+		},
+		{
+			"id": "q26",
+			"ix": "[1]",
+			"source": "q23"
+		},
+		{
+			"id": "q27",
+			"ix": "[8, 3, 1]",
+			"source": "q24"
+		}
+	],
+	"paths": [
+		{
+			"appearances": "",
+			"id": "q0_0",
+			"name": "A_d",
+			"source": "q0",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q0_0",
+			"name": "A_e",
+			"source": "q0",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q0_0",
+			"name": "A_c",
+			"source": "q0",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q0_0",
+			"name": "A_a",
+			"source": "q0",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q0_0",
+			"name": "A_b",
+			"source": "q0",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q1_0",
+			"name": "A_d",
+			"source": "q1",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q1_0",
+			"name": "B_e",
+			"source": "q1",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q1_0",
+			"name": "D_b",
+			"source": "q1",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q2_0",
+			"name": "D_e",
+			"source": "q2",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q2_0",
+			"name": "B_f",
+			"source": "q2",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q3_0",
+			"name": "A_c",
+			"source": "q3",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q3_0",
+			"name": "C_b",
+			"source": "q3",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q4_0",
+			"name": "C_b",
+			"source": "q4",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q5_0",
+			"name": "D_c",
+			"source": "q5",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q6_0",
+			"name": "C_d",
+			"source": "q6",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q13_0",
+			"name": "D_a",
+			"source": "q13",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q14_0",
+			"name": "A_c",
+			"source": "q14",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q15_0",
+			"name": "D_b",
+			"source": "q15",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q16_0",
+			"name": "D_a",
+			"source": "q16",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q17_0",
+			"name": "C_b",
+			"source": "q17",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q18_0",
+			"name": "A_b",
+			"source": "q18",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q19_0",
+			"name": "B_e",
+			"source": "q19",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q20_0",
+			"name": "C_d",
+			"source": "q20",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q21_0",
+			"name": "A_b",
+			"source": "q21",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q22_0",
+			"name": "B_f",
+			"source": "q22",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q23_0",
+			"name": "A_d",
+			"source": "q23",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q24_0",
+			"name": "A_b",
+			"source": "q24",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q25_0",
+			"name": "D_f",
+			"source": "q25",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q26_0",
+			"name": "B_e",
+			"source": "q26",
+			"target": "0"
+		}
+	]
+}

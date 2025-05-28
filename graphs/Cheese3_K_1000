@@ -1,0 +1,18 @@
+digraph {
+	fake [style=invisible]
+	rankdir=LR
+	q0
+	q1
+	q2
+	q3
+	q4
+	q7
+	fake -> q0 [style=bold]
+	q0 -> q1 [label="up, c, 0" color=black]
+	q1 -> q2 [label="up, c, 0" color=black]
+	q1 -> q3 [label="down, e, 0" color=black]
+	q2 -> q4 [label="up, c, 0" color=black]
+	q2 -> q3 [label="down, e, 0" color=black]
+	q3 -> q2 [label="up, c, 0" color=black]
+	q3 -> q7 [label="down, g, 1" color=black]
+}

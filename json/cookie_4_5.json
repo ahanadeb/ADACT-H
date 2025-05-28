@@ -1,0 +1,92 @@
+{
+	"nodes": [
+		{
+			"id": "q0",
+			"ix": "[0, 1, 2, 3, 4]",
+			"source": "None"
+		},
+		{
+			"id": "q1",
+			"ix": "[0, 1, 2, 3, 4]",
+			"source": "q0"
+		},
+		{
+			"id": "q2",
+			"ix": "[2, 4]",
+			"source": "q1"
+		},
+		{
+			"id": "q5",
+			"ix": "[2, 4]",
+			"source": "q2"
+		},
+		{
+			"id": "q6",
+			"ix": "[4]",
+			"source": "q5"
+		},
+		{
+			"id": "q8",
+			"ix": "[4]",
+			"source": "q6"
+		}
+	],
+	"paths": [
+		{
+			"appearances": "",
+			"id": "q0_0",
+			"name": "A_c",
+			"source": "q0",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q1_0",
+			"name": "A_d",
+			"source": "q1",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q1_0",
+			"name": "C_e",
+			"source": "q1",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q1_0",
+			"name": "B_b",
+			"source": "q1",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q2_0",
+			"name": "B_c",
+			"source": "q2",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q5_0",
+			"name": "A_d",
+			"source": "q5",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q5_0",
+			"name": "C_e",
+			"source": "q5",
+			"target": "0"
+		},
+		{
+			"appearances": "",
+			"id": "q6_0",
+			"name": "B_c",
+			"source": "q6",
+			"target": "0"
+		}
+	]
+}

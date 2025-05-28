@@ -45,6 +45,23 @@ def test_distinct(Q1, Q2, h,thres):
             return False, 0, 0
     return True, 0, 0
 
+
+
+def test_distinct_loops(Q1, Q2, h,thres):
+    # Test similarity between candidates and safe state
+    S = Q1.X + Q2.X
+    S = list(set(S))
+    if not S:
+        return True, 0, 0
+    for s in S:
+        f1 = get_frequency(Q1,s, h)
+        f2 = get_frequency(Q2,s, h)
+        # print(s, f1, f2)
+        if np.abs(f1 - f2) > thres:
+        #if (f1 ==0 and f2!=0 ) or (f2 ==0 and f1!=0 ):
+            return False, 0, 0
+    return True, 0, 0
+
 def get_frequency(q,s, h):
     if s in q.X:
         ind = q.X.index(s)

@@ -42,22 +42,27 @@ def render(pdfa):
     graph = graphviz.Digraph(format="png")
     graph.node("fake", style="invisible")
     graph.attr(rankdir="LR")
-    a_dict = {"A": "up","B":"down", "C": "right", "D": "left"}
 
-    for state in pdfa.states:
-        graph.node(state.name) # style='filled',fillcolor=hex_list[get_index]
+    states =[]
+    for i in range(len(pdfa.transitions)):
+        o1 = pdfa.transitions[i][0]
+        s = pdfa.transitions[i][1]
+        if s not in states:
+            graph.node(o1 +" " + s) # style='filled',fillcolor=hex_list[get_index]
+            states.append(s)
 
 
     graph.edge("fake", pdfa.initial_state.name, style="bold")
 
     for i in range(len(pdfa.transitions)):
-        s= pdfa.transitions[i][0]
-        a = pdfa.transitions[i][1]
-        o = pdfa.transitions[i][2]
-        r = pdfa.transitions[i][3]
-        s1 = pdfa.transitions[i][4]
+        o1 =pdfa.transitions[i][0]
+        s= pdfa.transitions[i][1]
+        a = pdfa.transitions[i][2]
+        o = pdfa.transitions[i][3]
+        r = pdfa.transitions[i][4]
+        s1 = pdfa.transitions[i][5]
 
-        label = f"{a_dict[a]}"
+        label = f"{a}"
         label += f", {o}"
         label += f", {r}"
         c = "black"

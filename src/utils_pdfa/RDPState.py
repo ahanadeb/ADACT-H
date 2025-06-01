@@ -17,10 +17,12 @@ class RDPState:
     Trptrp= None
 
     def __init__(self, name, cand=None, a='A', o='a', r='r'):
+        self.trajs_set = {'a': [], 'b': [], 'c': [], 'd': []}
         self.name = name
         self.a = a
         self.o = o
         self.r = r
+        self.O=[]
         self.parent = cand
         if cand == None:
             # if the state has no parent, create the state q0 with the entire dataset
@@ -33,7 +35,11 @@ class RDPState:
             self.ix = [i for i in cand.ix if ao in self.Data[i, cand.t]]
 
     # make a operator which takes self and obs o, and returns the number of times an "aor" has occured, given a particular o.
+    def add_o(self, o):
+        self.O.append(o)
 
+    def add_trajset(self, o, traj):
+        self.trajs_set[o].append(traj)
     def operatorC13oo(self, ix):
         # if o is None:
         #     # o = self.o

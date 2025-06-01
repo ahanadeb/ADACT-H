@@ -1,0 +1,8 @@
+digraph {
+	fake [style=invisible]
+	rankdir=LR
+	"a q0"
+	fake -> q0 [style=bold]
+	q0 -> q0 [label="None, [None], 0" color=black]
+	q0 -> q0 [label="None, [None], 0" color=black]
+}

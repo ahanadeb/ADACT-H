@@ -85,7 +85,9 @@ def learnRDP(H):
 
 # simulate K episodes of Tmaze with horizon H
 def simTMaze(filename, K, H):
-
+    # store the episodes in a 2-dimensional matrix D
+    # D[k, t] stores a string 'aor' at time t of episode k
+    # (a: upper-case letter, o: lower-case letter, r: digit)
 
     D = np.empty((K, H + 1), dtype=np.dtype('U3'))
 
@@ -95,18 +97,29 @@ def simTMaze(filename, K, H):
     # map discrete rewards to integers
     rews = set(sim.R.flat)
     rewmap = {k: v for v, k in enumerate(list(rews))}
+
     for k in range(K):
         sim.reset()
+
         # get the observation in the first state
-        #a = np.random.randint(3)
-        a=0
-        s, sp, o, r = sim.take_action(a)
-        D[k, 0] = '{}{}{}'.format( chr(65 + a), chr(97 + o), chr(48 + rewmap[r]))
+        s, sp, o, r = sim.take_action(0)
+        # print(s, 0, sp, o, r)
+        D[k, 0] = '{}{}{}'.format(chr(65), chr(97 + o), chr(48 + rewmap[r]))
+
         # go east H - 1 times
-        for i in range(H):
-            a = np.random.randint(len(sim.actions))
+        for i in range(H - 1):
+            a = 1
             s, sp, o, r = sim.take_action(a)
+            # print(s, a, sp, o, r)
             D[k, i + 1] = '{}{}{}'.format(chr(65 + a), chr(97 + o), chr(48 + rewmap[r]))
+
+        # randomly go up or down and add the dummy observation
+        a = 2 + np.random.randint(2)
+        s, sp, o, r = sim.take_action(a)
+        # print(s, a, sp, o, r)
+        dummy = sim.num_observations()
+        # D[k, H] = '{}{}{}'.f
+        D[k, H] = '{}{}{}'.format(chr(65 + a), chr(97 + dummy), chr(48 + rewmap[r]))
 
     return D
 

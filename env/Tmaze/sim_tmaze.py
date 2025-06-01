@@ -118,14 +118,12 @@ def simTMaze(filename, K, H):
 
         # get the observation in the first state
         s, sp, o, r = sim.take_action(0)
-        #print(s, 0, sp, o, r)
         D[k, 0] = '{}{}{}'.format(chr(65), chr(97 + o), chr(48 + rewmap[r]))
 
         # go east H - 1 times
         for i in range(H - 1):
             a = 1
             s, sp, o, r = sim.take_action(a)
-            #print(s, a, sp, o, r)
             D[k, i + 1] = '{}{}{}'.format(chr(65 + a), chr(97 + o), chr(48 + rewmap[r]))
 
         # randomly go up or down and add the dummy observation

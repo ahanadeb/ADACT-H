@@ -1,0 +1,41 @@
+digraph {
+	fake [style=invisible]
+	rankdir=LR
+	q0
+	q1
+	q3
+	q4
+	q6
+	q9
+	q15
+	fake -> q0 [style=bold]
+	q0 -> q0 [label="A, a, 0" color=black]
+	q0 -> q1 [label="A, a, 0" color=black]
+	q0 -> q1 [label="D, a, 0" color=black]
+	q0 -> q3 [label="B, e, 0" color=black]
+	q0 -> q4 [label="C, b, 0" color=black]
+	q1 -> q1 [label="A, a, 0" color=black]
+	q1 -> q6 [label="C, b, 0" color=black]
+	q1 -> q3 [label="B, e, 0" color=black]
+	q1 -> q1 [label="D, a, 0" color=black]
+	q3 -> q9 [label="B, f, 0" color=black]
+	q3 -> q3 [label="D, e, 0" color=black]
+	q3 -> q1 [label="A, a, 0" color=black]
+	q3 -> q3 [label="C, e, 0" color=black]
+	q4 -> q6 [label="A, b, 0" color=black]
+	q4 -> q6 [label="B, b, 0" color=black]
+	q4 -> q15 [label="C, c, 0" color=black]
+	q4 -> q1 [label="D, a, 0" color=black]
+	q6 -> q6 [label="A, b, 0" color=black]
+	q6 -> q1 [label="D, a, 0" color=black]
+	q6 -> q6 [label="B, b, 0" color=black]
+	q6 -> q15 [label="C, c, 0" color=black]
+	q9 -> q9 [label="D, f, 0" color=black]
+	q9 -> q9 [label="C, f, 0" color=black]
+	q9 -> q3 [label="A, e, 0" color=black]
+	q9 -> q9 [label="B, f, 0" color=black]
+	q15 -> q3 [label="B, e, 0" color=black]
+	q15 -> q15 [label="A, c, 0" color=black]
+	q15 -> q6 [label="D, b, 0" color=black]
+	q15 -> q6 [label="C, b, 0" color=black]
+}

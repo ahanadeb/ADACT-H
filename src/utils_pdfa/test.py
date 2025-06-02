@@ -17,6 +17,8 @@ class RDPState:
     Trptrp= None
 
     def __init__(self, name, cand=None, a='A', o='a', r='r'):
+        self.trajs_set = {'a': [], 'b': [], 'c': [], 'd': [], 'e':[], 'f':[]}
+        self.O = []
         self.name = name
         self.a = a
         self.o = o
@@ -56,7 +58,23 @@ class RDPState:
         # compute the empirical probabilities of each *triplet*
         ct = Counter([x for elem in self.Trp[self.ix, self.t-1] for x in elem])
         trpprob = [(k, v / len(self.ix)) for (k, v) in ct.most_common()]
+        # print("Evr", trpprob, self.ix)
         return np.array(trpprob)
+    def operatorC13o(self,o):
+        # compute the empirical probabilities of each *triplet*
+        ct = Counter([x for elem in self.Trp[self.trajs_set[o], self.t-1] for x in elem])
+
+        trpprob = [(k, v / len(self.trajs_set[o])) for (k, v) in ct.most_common()]
+        return np.array(trpprob)
+    def add_traj(self, traj, o):
+        # print("Rre",self.trajs_set)
+        if not self.trajs_set[o]:
+            self.trajs_set[o] = traj
+        else:
+
+            self.trajs_set[o]= self.trajs_set[o] + traj
+
+
 
 
 

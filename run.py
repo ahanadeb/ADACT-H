@@ -1,5 +1,5 @@
 from src.utils_pdfa.test import RDPState, simTMaze
-from src.utils_pdfa.learnRDP import learnRDP, learnRDP2
+from src.utils_pdfa.learnRDP import  learnRDP2
 import numpy as np
 from src.utils_pdfa.renderRDP import render
 import sys
@@ -21,14 +21,13 @@ def main():
     RDPState.Trp = np.array([[set([RDPState.Data[i][j]]) for j in range(H + 1)] for i in range(K)])
 
 
-
     for j in range(H+1):
         RDPState.Act[:, H - 1 - j] = [RDPState.Act[i, H - 1 - j].union(RDPState.Act[i, H - j]) for i in range(K)]
         RDPState.Obs[:, H - 1 - j] = [RDPState.Obs[i, H - 1 - j].union(RDPState.Obs[i, H - j]) for i in range(K)]
         RDPState.Rew[:, H - 1 - j] = [RDPState.Rew[i, H - 1 - j].union(RDPState.Rew[i, H - j]) for i in range(K)]
         RDPState.Trp[:, H - 1 - j] = [RDPState.Trp[i, H - 1 - j].union(RDPState.Trp[i, H - j]) for i in range(K)]
         # RDPState.Trptrp[:, H - 1 - j] = [RDPState.Trptrp[i, H - 1 - j].union(RDPState.Trptrp[i, H - j]) for i in range(K)]
-    RDP = learnRDP2(H,4, thres)
+    RDP = learnRDP2(H,6, thres)
 #    RDP = learnRDP(H, thres)
 #     print("State space: ", len(RDP.states))
 

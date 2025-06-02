@@ -1,0 +1,61 @@
+{
+	"nodes": [
+		{
+			"id": "q0",
+			"ix": "[2, 7, 0, 1, 4, 10, 11]",
+			"source": "None"
+		},
+		{
+			"id": "q1",
+			"ix": "[3, 5, 6, 9, 12, 13, 14]",
+			"source": "q0"
+		},
+		{
+			"id": "q2",
+			"ix": "[0, 1, 4, 10, 11]",
+			"source": "q0"
+		},
+		{
+			"id": "q3",
+			"ix": "[2, 7]",
+			"source": "q0"
+		}
+	],
+	"paths": [
+		{
+			"appearances": "",
+			"id": "b_a",
+			"name": "q0_A",
+			"source": "b",
+			"target": "a"
+		},
+		{
+			"appearances": "",
+			"id": "a_a",
+			"name": "q0_A",
+			"source": "a",
+			"target": "a"
+		},
+		{
+			"appearances": "",
+			"id": "b_c",
+			"name": "q0_B",
+			"source": "b",
+			"target": "c"
+		},
+		{
+			"appearances": "",
+			"id": "b_d",
+			"name": "q0_B",
+			"source": "b",
+			"target": "d"
+		},
+		{
+			"appearances": "",
+			"id": "a_d",
+			"name": "q0_B",
+			"source": "a",
+			"target": "d"
+		}
+	]
+}

@@ -45,10 +45,10 @@ def render(pdfa):
 
     states =[]
     for i in range(len(pdfa.transitions)):
-        o1 = pdfa.transitions[i][0]
+
         s = pdfa.transitions[i][1]
         if s not in states:
-            graph.node(o1 +" " + s) # style='filled',fillcolor=hex_list[get_index]
+            graph.node(s) # style='filled',fillcolor=hex_list[get_index]
             states.append(s)
 
 

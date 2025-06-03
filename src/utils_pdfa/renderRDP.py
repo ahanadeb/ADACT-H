@@ -62,10 +62,16 @@ def render(pdfa):
         r = pdfa.transitions[i][4]
         s1 = pdfa.transitions[i][5]
 
-        label = f"{a}"
+        label = f"{o1}"
+        label += f", {a}"
         label += f", {o}"
         label += f", {r}"
         c = "black"
+
+        if s=='q0' and s1 =='q0':
+            label = f"{a}"
+            label += f", {o}"
+            label += f", {r}"
         graph.edge(
             s,
             s1,

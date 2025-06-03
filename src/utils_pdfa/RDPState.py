@@ -113,7 +113,7 @@ def simTMaze(filename, K, H):
         D[k, 0] = '{}{}{}'.format( chr(65 + a), chr(97 + o), chr(48 + rewmap[r]))
         # go east H - 1 times
         for i in range(H):
-            print("here ", str(a), " ", str(o), " ", str(sp), " ", str(r))
+            # print("here ", str(a), " ", str(o), " ", str(sp), " ", str(r))
             #a = np.random.randint(len(sim.actions))
             a = np.random.choice([0,1,2,3], 1, p=[1/4, 1/4,1/4, 1/4])[0]
             s, sp, o, r = sim.take_action(a)

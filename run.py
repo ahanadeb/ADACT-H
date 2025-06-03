@@ -4,7 +4,7 @@ import numpy as np
 from src.utils_pdfa.renderRDP import render
 import sys
 from src.utils_pdfa.save_to_json import save_json
-
+import time
 def main():
     H = int(sys.argv[2])
     K = int(sys.argv[3])
@@ -27,7 +27,10 @@ def main():
         RDPState.Rew[:, H - 1 - j] = [RDPState.Rew[i, H - 1 - j].union(RDPState.Rew[i, H - j]) for i in range(K)]
         RDPState.Trp[:, H - 1 - j] = [RDPState.Trp[i, H - 1 - j].union(RDPState.Trp[i, H - j]) for i in range(K)]
         # RDPState.Trptrp[:, H - 1 - j] = [RDPState.Trptrp[i, H - 1 - j].union(RDPState.Trptrp[i, H - j]) for i in range(K)]
+    t = time.time()
     RDP = learnRDP2(H,6, thres)
+    print("time taken: ", time.time()-t)
+
 #    RDP = learnRDP(H, thres)
 #     print("State space: ", len(RDP.states))
 

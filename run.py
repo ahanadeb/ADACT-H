@@ -36,6 +36,8 @@ def main():
     graph.render("." + savefile)
     print("Graph saved at: ", savefile+".svg")
     save_json(RDP,sys.argv)
+    for q in RDP.states:
+        print(q.name, q.trajs_set)
 
 
 

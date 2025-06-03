@@ -13,6 +13,6 @@ digraph {
 	q0 -> q1 [label="B, c, 0" color=black]
 	q1 -> q2 [label="B, d, 0" color=black]
 	q1 -> q1 [label="B, c, 0" color=black]
-	q2 -> q2 [label="B, d, 0" color=black]
 	q2 -> q1 [label="B, c, 0" color=black]
+	q2 -> q2 [label="B, d, 0" color=black]
 }

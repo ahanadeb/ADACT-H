@@ -1,0 +1,271 @@
+digraph {
+	fake [style=invisible]
+	rankdir=LR
+	q0
+	q5
+	q8
+	q11
+	q15
+	q16
+	q21
+	q24
+	q26
+	q27
+	q30
+	q31
+	q36
+	q40
+	q57
+	q58
+	q59
+	q60
+	q61
+	q62
+	q63
+	q70
+	q72
+	q73
+	q76
+	q83
+	q85
+	q87
+	q91
+	q92
+	q94
+	q98
+	q99
+	q101
+	q102
+	q105
+	q166
+	q167
+	q168
+	q171
+	q173
+	q174
+	q175
+	q176
+	q177
+	q178
+	q179
+	q180
+	q181
+	q182
+	q183
+	q185
+	q186
+	q188
+	q189
+	q190
+	q191
+	q192
+	q193
+	q194
+	q195
+	q196
+	q197
+	fake -> q0 [style=bold]
+	q0 -> q0 [label="A, a, 0" color=black]
+	q0 -> q0 [label="A, b, 0" color=black]
+	q0 -> q0 [label="A, d, 0" color=black]
+	q0 -> q0 [label="A, g, 1" color=black]
+	q0 -> q0 [label="A, a, 0" color=black]
+	q0 -> q0 [label="B, b, 0" color=black]
+	q0 -> q0 [label="C, d, 0" color=black]
+	q0 -> q0 [label="A, b, 0" color=black]
+	q0 -> q5 [label="B, e, 0" color=black]
+	q0 -> q0 [label="C, d, 0" color=black]
+	q0 -> q0 [label="C, a, 0" color=black]
+	q0 -> q8 [label="B, c, 0" color=black]
+	q0 -> q0 [label="A, d, 0" color=black]
+	q0 -> q0 [label="B, b, 0" color=black]
+	q0 -> q11 [label="C, f, 0" color=black]
+	q0 -> q8 [label="C, c, 0" color=black]
+	q0 -> q0 [label="A, a, 0" color=black]
+	q0 -> q0 [label="B, a, 0" color=black]
+	q0 -> q15 [label="B, d, 0" color=black]
+	q0 -> q16 [label="C, b, 0" color=black]
+	q0 -> q16 [label="B, b, 0" color=black]
+	q0 -> q15 [label="A, d, 0" color=black]
+	q0 -> q15 [label="C, d, 0" color=black]
+	q0 -> q16 [label="A, b, 0" color=black]
+	q0 -> q21 [label="C, f, 0" color=black]
+	q0 -> q5 [label="C, e, 0" color=black]
+	q0 -> q21 [label="B, f, 0" color=black]
+	q0 -> q24 [label="A, e, 0" color=black]
+	q0 -> q5 [label="B, e, 0" color=black]
+	q0 -> q26 [label="A, f, 0" color=black]
+	q0 -> q27 [label="A, a, 0" color=black]
+	q0 -> q27 [label="C, a, 0" color=black]
+	q0 -> q27 [label="B, a, 0" color=black]
+	q0 -> q30 [label="C, c, 0" color=black]
+	q0 -> q31 [label="A, c, 0" color=black]
+	q0 -> q30 [label="B, c, 0" color=black]
+	q5 -> q11 [label="B, f, 0" color=black]
+	q5 -> q0 [label="C, b, 0" color=black]
+	q5 -> q0 [label="A, a, 0" color=black]
+	q5 -> q36 [label="A, g, 0" color=black]
+	q8 -> q0 [label="C, b, 0" color=black]
+	q8 -> q0 [label="A, d, 0" color=black]
+	q8 -> q0 [label="B, d, 0" color=black]
+	q11 -> q40 [label="C, e, 0" color=black]
+	q11 -> q0 [label="B, d, 0" color=black]
+	q11 -> q0 [label="A, b, 0" color=black]
+	q15 -> q0 [label="A, d, 0" color=black]
+	q15 -> q11 [label="C, f, 0" color=black]
+	q15 -> q0 [label="B, b, 0" color=black]
+	q15 -> q8 [label="C, c, 0" color=black]
+	q15 -> q0 [label="B, a, 0" color=black]
+	q15 -> q0 [label="A, a, 0" color=black]
+	q16 -> q0 [label="A, b, 0" color=black]
+	q16 -> q0 [label="C, d, 0" color=black]
+	q16 -> q5 [label="B, e, 0" color=black]
+	q16 -> q8 [label="B, c, 0" color=black]
+	q16 -> q0 [label="C, a, 0" color=black]
+	q21 -> q40 [label="C, e, 0" color=black]
+	q21 -> q0 [label="A, b, 0" color=black]
+	q21 -> q0 [label="B, d, 0" color=black]
+	q24 -> q57 [label="C, b, 0" color=black]
+	q24 -> q58 [label="B, f, 0" color=black]
+	q24 -> q59 [label="A, g, 0" color=black]
+	q24 -> q60 [label="A, a, 0" color=black]
+	q26 -> q61 [label="A, b, 0" color=black]
+	q26 -> q62 [label="C, e, 0" color=black]
+	q26 -> q63 [label="B, d, 0" color=black]
+	q27 -> q0 [label="A, a, 0" color=black]
+	q27 -> q0 [label="B, b, 0" color=black]
+	q27 -> q0 [label="C, d, 0" color=black]
+	q30 -> q0 [label="B, d, 0" color=black]
+	q30 -> q0 [label="C, b, 0" color=black]
+	q30 -> q0 [label="A, d, 0" color=black]
+	q31 -> q70 [label="B, d, 0" color=black]
+	q31 -> q70 [label="A, d, 0" color=black]
+	q31 -> q72 [label="C, b, 0" color=black]
+	q36 -> q73 [label="C, b, 0" color=black]
+	q36 -> q73 [label="B, b, 0" color=black]
+	q36 -> q73 [label="A, b, 0" color=black]
+	q36 -> q76 [label="A, d, 0" color=black]
+	q36 -> q76 [label="C, d, 0" color=black]
+	q36 -> q26 [label="A, f, 0" color=black]
+	q36 -> q40 [label="B, e, 0" color=black]
+	q36 -> q40 [label="C, e, 0" color=black]
+	q36 -> q76 [label="B, d, 0" color=black]
+	q36 -> q24 [label="A, e, 0" color=black]
+	q36 -> q83 [label="B, f, 0" color=black]
+	q36 -> q83 [label="C, f, 0" color=black]
+	q36 -> q85 [label="A, a, 0" color=black]
+	q36 -> q85 [label="C, a, 0" color=black]
+	q36 -> q87 [label="C, c, 0" color=black]
+	q36 -> q87 [label="B, c, 0" color=black]
+	q36 -> q31 [label="A, c, 0" color=black]
+	q36 -> q85 [label="B, a, 0" color=black]
+	q40 -> q91 [label="C, b, 0" color=black]
+	q40 -> q92 [label="B, f, 0" color=black]
+	q40 -> q36 [label="A, g, 0" color=black]
+	q40 -> q94 [label="A, a, 0" color=black]
+	q57 -> q0 [label="A, b, 0" color=black]
+	q57 -> q5 [label="B, e, 0" color=black]
+	q57 -> q0 [label="C, d, 0" color=black]
+	q58 -> q98 [label="A, b, 0" color=black]
+	q58 -> q99 [label="B, d, 0" color=black]
+	q58 -> q40 [label="C, e, 0" color=black]
+	q59 -> q101 [label="B, c, 0" color=black]
+	q59 -> q102 [label="B, d, 0" color=black]
+	q59 -> q83 [label="B, f, 0" color=black]
+	q59 -> q73 [label="C, b, 0" color=black]
+	q59 -> q105 [label="C, d, 0" color=black]
+	q59 -> q58 [label="C, f, 0" color=black]
+	q59 -> q85 [label="A, a, 0" color=black]
+	q59 -> q76 [label="A, d, 0" color=black]
+	q59 -> q24 [label="A, e, 0" color=black]
+	q59 -> q85 [label="B, a, 0" color=black]
+	q59 -> q73 [label="B, b, 0" color=black]
+	q59 -> q40 [label="C, e, 0" color=black]
+	q60 -> q0 [label="C, d, 0" color=black]
+	q60 -> q0 [label="B, b, 0" color=black]
+	q60 -> q0 [label="A, a, 0" color=black]
+	q61 -> q5 [label="B, e, 0" color=black]
+	q61 -> q0 [label="C, d, 0" color=black]
+	q61 -> q0 [label="A, b, 0" color=black]
+	q62 -> q58 [label="B, f, 0" color=black]
+	q62 -> q91 [label="C, b, 0" color=black]
+	q62 -> q94 [label="A, a, 0" color=black]
+	q62 -> q36 [label="A, g, 0" color=black]
+	q63 -> q0 [label="B, b, 0" color=black]
+	q63 -> q11 [label="C, f, 0" color=black]
+	q63 -> q0 [label="A, a, 0" color=black]
+	q63 -> q0 [label="A, d, 0" color=black]
+	q70 -> q0 [label="B, a, 0" color=black]
+	q70 -> q8 [label="C, c, 0" color=black]
+	q70 -> q0 [label="A, d, 0" color=black]
+	q72 -> q0 [label="C, a, 0" color=black]
+	q72 -> q8 [label="B, c, 0" color=black]
+	q72 -> q0 [label="A, b, 0" color=black]
+	q73 -> q0 [label="A, b, 0" color=black]
+	q73 -> q5 [label="B, e, 0" color=black]
+	q73 -> q0 [label="C, d, 0" color=black]
+	q73 -> q0 [label="C, a, 0" color=black]
+	q73 -> q8 [label="B, c, 0" color=black]
+	q76 -> q0 [label="A, d, 0" color=black]
+	q76 -> q0 [label="B, b, 0" color=black]
+	q76 -> q0 [label="A, a, 0" color=black]
+	q76 -> q8 [label="C, c, 0" color=black]
+	q76 -> q11 [label="C, f, 0" color=black]
+	q76 -> q0 [label="B, a, 0" color=black]
+	q83 -> q91 [label="A, b, 0" color=black]
+	q83 -> q99 [label="B, d, 0" color=black]
+	q83 -> q40 [label="C, e, 0" color=black]
+	q85 -> q0 [label="B, b, 0" color=black]
+	q85 -> q0 [label="A, a, 0" color=black]
+	q85 -> q0 [label="C, d, 0" color=black]
+	q87 -> q0 [label="A, d, 0" color=black]
+	q87 -> q0 [label="B, d, 0" color=black]
+	q87 -> q0 [label="C, b, 0" color=black]
+	q91 -> q0 [label="A, b, 0" color=black]
+	q91 -> q0 [label="C, d, 0" color=black]
+	q91 -> q5 [label="B, e, 0" color=black]
+	q92 -> q40 [label="C, e, 0" color=black]
+	q92 -> q0 [label="A, b, 0" color=black]
+	q92 -> q0 [label="B, d, 0" color=black]
+	q94 -> q0 [label="B, b, 0" color=black]
+	q94 -> q0 [label="A, a, 0" color=black]
+	q94 -> q0 [label="C, d, 0" color=black]
+	q98 -> q5 [label="B, e, 0" color=black]
+	q98 -> q0 [label="C, d, 0" color=black]
+	q98 -> q0 [label="A, b, 0" color=black]
+	q99 -> q99 [label="A, d, 0" color=black]
+	q99 -> q166 [label="A, a, 0" color=black]
+	q99 -> q167 [label="B, b, 0" color=black]
+	q99 -> q168 [label="C, f, 0" color=black]
+	q101 -> q0 [label="C, b, 0" color=black]
+	q102 -> q58 [label="C, f, 0" color=black]
+	q105 -> q171 [label="A, d, 0" color=black]
+	q105 -> q166 [label="B, a, 0" color=black]
+	q166 -> q173 [label="C, d, 0" color=black]
+	q167 -> q174 [label="B, e, 0" color=black]
+	q168 -> q175 [label="A, b, 0" color=black]
+	q171 -> q176 [label="B, a, 0" color=black]
+	q173 -> q177 [label="A, d, 0" color=black]
+	q174 -> q178 [label="C, b, 0" color=black]
+	q175 -> q179 [label="B, e, 0" color=black]
+	q176 -> q180 [label="A, a, 0" color=black]
+	q177 -> q181 [label="B, a, 0" color=black]
+	q178 -> q182 [label="C, d, 0" color=black]
+	q179 -> q183 [label="C, b, 0" color=black]
+	q180 -> q180 [label="A, a, 0" color=black]
+	q181 -> q185 [label="B, b, 0" color=black]
+	q182 -> q186 [label="A, a, 0" color=black]
+	q183 -> q179 [label="B, e, 0" color=black]
+	q185 -> q188 [label="C, a, 0" color=black]
+	q186 -> q189 [label="B, b, 0" color=black]
+	q188 -> q190 [label="C, d, 0" color=black]
+	q189 -> q191 [label="B, c, 0" color=black]
+	q190 -> q192 [label="C, c, 0" color=black]
+	q191 -> q193 [label="C, b, 0" color=black]
+	q192 -> q194 [label="B, d, 0" color=black]
+	q193 -> q195 [label="C, a, 0" color=black]
+	q194 -> q196 [label="C, c, 0" color=black]
+	q195 -> q197 [label="A, a, 0" color=black]
+	q196 -> q198 [label="C, b, 0" color=black]
+	q197 -> q199 [label="C, d, 0" color=black]
+}

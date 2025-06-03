@@ -16,6 +16,7 @@ class RDPState2:
     Trptrp= None
     def __init__(self, name, cand=None, a='A', o='a', r='r'):
         self.trajs_set = {'a': [], 'b': [], 'c': [], 'd': [], 'e': [], 'f': [], 'g':[], 'h':[], 'i':[]}
+        self.add = {'a': [0]*4, 'b': [0]*4, 'c': [0]*4, 'd': [0]*4, 'e': [0]*4, 'f': [0]*4, 'g':[0]*4, 'h':[0]*4, 'i':[0]*4}
         self.name = name
         self.a = a
         self.o = o

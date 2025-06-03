@@ -1,5 +1,5 @@
 import json
-
+import pandas as pd
 def save_json(RDP, path):
     #save nodes
     nodes=[]
@@ -31,3 +31,11 @@ def save_json(RDP, path):
     json.dump(jsonfile, open(save_path, 'w'), sort_keys=True, indent='\t', separators=(',', ': '))
     print("RDP saved at: ", save_path)
 
+def save_csv(RDP, path):
+    save_path = './csv/' + path[1] + "_" + path[2] + "_" + path[3] + '.csv'
+    df = pd.DataFrame(RDP.transitions)
+
+
+    df.to_csv(save_path)
+
+    print("Transition saved at: ", save_path)

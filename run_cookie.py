@@ -3,8 +3,9 @@ from src.utils_pdfa.learnRDP import  learnRDP2
 import numpy as np
 from src.utils_pdfa.renderRDP import render
 import sys
-from src.utils_pdfa.save_to_json import save_json
+from src.utils_pdfa.save_to_json import save_json, save_csv
 import time
+
 def main():
     H = int(sys.argv[2])
     K = int(sys.argv[3])
@@ -41,7 +42,7 @@ def main():
     print("Graph saved at: ", savefile+".svg")
     save_json(RDP,sys.argv)
     print(RDP.transitions)
-
+    save_csv(RDP,sys.argv)
 
 
 if __name__ == "__main__":

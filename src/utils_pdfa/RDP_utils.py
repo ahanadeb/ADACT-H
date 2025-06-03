@@ -2,17 +2,17 @@ from src.utils_pdfa.test import RDPState
 import numpy as np
 
 
-def get_candidates(Q_prev, pdfa):
-    Q_t = []
-    for q in Q_prev:
-        unq, cnt = np.unique(q.Data[q.ix, q.t], axis=0, return_counts=True)
-        #sorted in descending order of frequency of aor
-        candidates_sorted = unq[np.argsort(-cnt)]
-        for i in range(len(candidates_sorted)):
-            Q_t.append(
-                RDPState(pdfa.get_name(), q, candidates_sorted[i][0], candidates_sorted[i][1], candidates_sorted[i][2]))
-
-    return Q_t
+# def get_candidates(Q_prev, pdfa):
+#     Q_t = []
+#     for q in Q_prev:
+#         unq, cnt = np.unique(q.Data[q.ix, q.t], axis=0, return_counts=True)
+#         #sorted in descending order of frequency of aor
+#         candidates_sorted = unq[np.argsort(-cnt)]
+#         for i in range(len(candidates_sorted)):
+#             Q_t.append(
+#                 RDPState(pdfa.get_name(), q, candidates_sorted[i][0], candidates_sorted[i][1], candidates_sorted[i][2]))
+#
+#     return Q_t
 
 
 def get_candidate(o, q, H):
@@ -59,7 +59,7 @@ def test_distinct(q1, q2, o, H, thres):
     for s in seq:
         p1 = get_probability(s, q1_prob)
         p2 = get_probability(s, q2_prob)
-        print(s, p1, p2)
+        print(s, p1, p2, np.abs(p1 - p2))
         if np.abs(p1 - p2) > thres:
             return False
     return True

@@ -56,13 +56,13 @@ class RDPState:
 
     def operatorC13(self):
         # compute the empirical probabilities of each *triplet*
-        ct = Counter([x for elem in self.Trp[self.ix, self.t-1] for x in elem])
+        ct = Counter([x for elem in self.Trp[self.ix, self.t] for x in elem])
         trpprob = [(k, v / len(self.ix)) for (k, v) in ct.most_common()]
         # print("Evr", trpprob, self.ix)
         return np.array(trpprob)
     def operatorC13o(self,o):
         # compute the empirical probabilities of each *triplet*
-        ct = Counter([x for elem in self.Trp[self.trajs_set[o], self.t-1] for x in elem])
+        ct = Counter([x for elem in self.Trp[self.trajs_set[o], self.t] for x in elem])
 
         trpprob = [(k, v / len(self.trajs_set[o])) for (k, v) in ct.most_common()]
         return np.array(trpprob)

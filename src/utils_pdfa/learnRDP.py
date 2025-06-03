@@ -25,7 +25,9 @@ def learnRDP2(H, obs, thres):
         u1 = ou[1]
         o1 = ou[0]
         # traj1 = trajs.pop(0)
+
         AO = get_candidate(o1,u1, H)  #get ao sets (can we get this set at thw start?
+        print("from ", o1, u1.name, " getting candidates : ")
         print("AO",AO)
         for ao in AO:
             a2 = ao[0]
@@ -43,14 +45,19 @@ def learnRDP2(H, obs, thres):
             # q2.add_traj(traj2,o1)
             q2.add_traj(traj2,o2)
             j = i[o2_int]
+            merge=False
             for k in range(i[o2_int]):
                 #get all the u that are prefaced by o
                 q3 = states[o2_int][k]
+                print("comparing ", q2.name, " ", q3.name)
                 similar = test_distinct(q3, q2, o2, H, thres)
-                if not similar:
+                if similar and merge==False:
                     j = k
-            if j < i[o2_int]:
+                    state_to_merge_to=q3
+                    merge=True
+            if merge==True:
                 #add the new state
+                q3 = state_to_merge_to
                 print("merging ", q2.name, " to ", q3.name)
                 print("adding transition", o1, q2.parent.name, q3.name, a2, o2, 0)
                 pdfa.add_transition(o1, q2.parent, q3, a2, o2, 0,  True)  #merge

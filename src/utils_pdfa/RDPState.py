@@ -15,7 +15,7 @@ class RDPState2:
     Trp = None
     Trptrp= None
     def __init__(self, name, cand=None, a='A', o='a', r='r'):
-        self.trajs_set = {'a': [], 'b': [], 'c': [], 'd': []}
+        self.trajs_set = {'a': [], 'b': [], 'c': [], 'd': [], 'e': [], 'f': [], 'g':[], 'h':[], 'i':[]}
         self.name = name
         self.a = a
         self.o = o
@@ -60,9 +60,9 @@ class RDPState2:
         trpprob = [(k, v / len(self.trajs_set[o])) for (k, v) in ct.most_common()]
         return np.array(trpprob)
     def add_traj(self, o, traj):
-        print(self.trajs_set[o])
+        # print(self.trajs_set[o])
         self.trajs_set[o].append(traj)
-        print(self.trajs_set[o])
+        # print(self.trajs_set[o])
 
 
 
@@ -113,7 +113,7 @@ def simTMaze(filename, K, H):
         D[k, 0] = '{}{}{}'.format( chr(65 + a), chr(97 + o), chr(48 + rewmap[r]))
         # go east H - 1 times
         for i in range(H):
-            print("here ", str(a), " ", str(o), " ", str(sp), " ", str(r))
+            # print("here ", str(a), " ", str(o), " ", str(sp), " ", str(r))
             #a = np.random.randint(len(sim.actions))
             a = np.random.choice([0,1,2,3], 1, p=[1/4, 1/4,1/4, 1/4])[0]
             s, sp, o, r = sim.take_action(a)

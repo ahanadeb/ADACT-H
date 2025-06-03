@@ -55,11 +55,11 @@ def test_distinct(q1, q2, o, H, thres):
     q2_prob = q2.operatorC13()
     # print("here", q1_prob, q2_prob)
     seq = list(set(q1_prob[:, 0])) + list(set(q2_prob[:, 0]) - set(q1_prob[:, 0]))
-    print("comparing", q1.name, q2.name)
+    # print("comparing", q1.name, q2.name)
     for s in seq:
         p1 = get_probability(s, q1_prob)
         p2 = get_probability(s, q2_prob)
-        print(s, p1, p2, np.abs(p1 - p2))
+        # print(s, p1, p2, np.abs(p1 - p2))
         if np.abs(p1 - p2) > thres:
             return False
     return True

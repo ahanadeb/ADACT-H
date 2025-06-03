@@ -74,7 +74,7 @@ class Simulator(object):
         # print("eeregr", state, self.states) #added for cheese
         # brek
         self.curr_state = self.states.index(state)
-        # self.curr_state = 0
+        #self.curr_state = 0
     def num_states(self):
         return len(self.states)
 

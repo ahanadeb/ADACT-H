@@ -92,8 +92,7 @@ def learnRDP3(H,obs, thres,K):
                         pdfa.add_transition(qu_prev[0], u2.parent, a, o, u_prev, merge=True)
                         print("check2", pdfa.transitions)
                         # Q.append([q_next, u2])
-                        Q.append(['q4', u2])
-                        Q_copy.append(['q4', u2])
+
 
                         break
                     #add transition funciton

@@ -2,8 +2,20 @@ digraph {
 	fake [style=invisible]
 	rankdir=LR
 	u0
+	u3
+	u4
+	u3
+	u4
 	u2
+	u3
+	u4
+	u3
+	u4
 	u1
+	u3
+	u4
+	u3
+	u4
 	fake -> u0 [style=bold]
 	u0 -> u1 [label=" a" color=black]
 	u0 -> u2 [label=" b" color=black]
@@ -11,4 +23,6 @@ digraph {
 	u2 -> u2 [label=" d" color=black]
 	u1 -> u1 [label=" c" color=black]
 	u1 -> u1 [label=" d" color=black]
+	u1 -> u4 [label=" e" color=black]
+	u2 -> u3 [label=" e" color=black]
 }

@@ -62,7 +62,7 @@ def render(pdfa):
 
 
 
-        label = f" {o}"
+        label = f", {o}"
         c = "black"
 
 

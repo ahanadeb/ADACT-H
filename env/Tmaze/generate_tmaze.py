@@ -1,7 +1,7 @@
 
 
 def generate_tmaze(discount, H):
-    with open('env/Tmaze/generated_tmazes/Tmaze'+str(H)+'.POMDP', 'w') as f:
+    with open('/Users/ahanadeb/Code/ADACT-H/env/Tmaze/generated_tmazes/Tmaze'+str(H)+'.POMDP', 'w') as f:
         f.write('# Noisy T-maze - length ' + str(H)+'\n' +"\n")
         f.write("discount: "+ str(discount) +"\n")
         f.write("values: reward" +"\n")
@@ -55,5 +55,5 @@ def generate_tmaze(discount, H):
 
 
 if __name__ == "__main__":
-    for i in range (5,50):
+    for i in range (3,50):
         generate_tmaze(1.0, i)

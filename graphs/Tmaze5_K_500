@@ -1,24 +1,14 @@
 digraph {
 	fake [style=invisible]
 	rankdir=LR
-	q0
-	q1
-	q2
-	q3
-	q4
-	fake -> q0 [style=bold]
-	q0 -> q0 [label="A, a, 0" color=black]
-	q0 -> q0 [label="A, b, 0" color=black]
-	q0 -> q1 [label="a, B, c, 0" color=black]
-	q0 -> q2 [label="a, B, d, 0" color=black]
-	q0 -> q3 [label="b, B, d, 0" color=black]
-	q0 -> q4 [label="b, B, c, 0" color=black]
-	q1 -> q1 [label="c, B, c, 0" color=black]
-	q1 -> q2 [label="c, B, d, 0" color=black]
-	q2 -> q1 [label="d, B, c, 0" color=black]
-	q2 -> q2 [label="d, B, d, 0" color=black]
-	q3 -> q3 [label="d, B, d, 0" color=black]
-	q3 -> q4 [label="d, B, c, 0" color=black]
-	q4 -> q3 [label="c, B, d, 0" color=black]
-	q4 -> q4 [label="c, B, c, 0" color=black]
+	u0
+	u2
+	u1
+	fake -> u0 [style=bold]
+	u0 -> u1 [label=" a" color=black]
+	u0 -> u2 [label=" b" color=black]
+	u2 -> u2 [label=" c" color=black]
+	u2 -> u2 [label=" d" color=black]
+	u1 -> u1 [label=" c" color=black]
+	u1 -> u1 [label=" d" color=black]
 }

@@ -15,12 +15,14 @@ class RDPState2:
     Trp = None
     Trptrp= None
     def __init__(self, name, cand=None, a='A', o='a', r='r'):
-        self.trajs_set = {'a': [], 'b': [], 'c': [], 'd': []}
+        self.trajs_set = {'a': [], 'b': [], 'c': [], 'd': [], 'e': [], 'f': []}
+
         self.name = name
         self.a = a
         self.o = o
         self.r = r
         self.O=[]
+        self.ix_new = []
         self.parent = cand
         if cand == None:
             # if the state has no parent, create the state q0 with the entire dataset
@@ -54,10 +56,10 @@ class RDPState2:
         ct = Counter([x for elem in self.Trp[self.ix, self.t-1] for x in elem])
         trpprob = [(k, v / len(self.ix)) for (k, v) in ct.most_common()]
         return np.array(trpprob)
-    def operatorC13o(self,o):
+    def operatorC13o(self):
         # compute the empirical probabilities of each *triplet*
-        ct = Counter([x for elem in self.Trp[self.trajs_set[o], self.t-1] for x in elem])
-        trpprob = [(k, v / len(self.trajs_set[o])) for (k, v) in ct.most_common()]
+        ct = Counter([x for elem in self.Trp[self.ix_new, self.t-1] for x in elem])
+        trpprob = [(k, v / len(self.ix_new)) for (k, v) in ct.most_common()]
         return np.array(trpprob)
     def add_traj(self, o, traj):
         print(self.trajs_set[o])

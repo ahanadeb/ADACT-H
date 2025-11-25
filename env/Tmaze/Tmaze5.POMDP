@@ -1,5 +1,5 @@
 # Noisy T-maze - length 5
-
+# T: action : state: state
 discount: 1.0
 values: reward
 states: 13

@@ -1,5 +1,5 @@
 from src.utils_pdfa.test import RDPState, simTMaze
-from src.utils_pdfa.learnRDP import  learnRDP2
+from src.utils_pdfa.learnRDP import  learnRDP2, learnRDP_prior, learnRDP3
 import numpy as np
 from src.utils_pdfa.renderRDP import render
 import sys
@@ -28,7 +28,8 @@ def main():
         RDPState.Trp[:, H - 1 - j] = [RDPState.Trp[i, H - 1 - j].union(RDPState.Trp[i, H - j]) for i in range(K)]
         # RDPState.Trptrp[:, H - 1 - j] = [RDPState.Trptrp[i, H - 1 - j].union(RDPState.Trptrp[i, H - j]) for i in range(K)]
     t = time.time()
-    RDP = learnRDP2(H,6, thres)
+    RDP = learnRDP3(H,5, thres, K)
+    #RDP = learnRDP2(H, 5, thres)
     print("time taken: ", time.time()-t)
 
 #    RDP = learnRDP(H, thres)
@@ -39,8 +40,8 @@ def main():
     graph.render("." + savefile)
     print("Graph saved at: ", savefile+".svg")
     save_json(RDP,sys.argv)
-    for q in RDP.states:
-        print(q.name, q.trajs_set)
+    # for q in RDP.states:
+    #     print(q.name, q.trajs_set)
 
 
 

@@ -24,6 +24,7 @@ class RDPState:
         self.o = o
         self.r = r
         self.parent = cand
+        self.ix_new = []
         if cand == None:
             # if the state has no parent, create the state q0 with the entire dataset
             self.t = 0
@@ -60,11 +61,11 @@ class RDPState:
         trpprob = [(k, v / len(self.ix)) for (k, v) in ct.most_common()]
         # print("Evr", trpprob, self.ix)
         return np.array(trpprob)
-    def operatorC13o(self,o):
+    def operatorC13o(self):
         # compute the empirical probabilities of each *triplet*
-        ct = Counter([x for elem in self.Trp[self.trajs_set[o], self.t] for x in elem])
+        ct = Counter([x for elem in self.Trp[self.ix_new, self.t] for x in elem])
 
-        trpprob = [(k, v / len(self.trajs_set[o])) for (k, v) in ct.most_common()]
+        trpprob = [(k, v / len(self.ix_new)) for (k, v) in ct.most_common()]
         return np.array(trpprob)
     def add_traj(self, traj, o):
         # print("Rre",self.trajs_set)
@@ -127,6 +128,7 @@ def simTMaze(filename, K, H):
         # go east H - 1 times
         for i in range(H - 1):
             a = 1
+            #a=np.random.randint(3)
             s, sp, o, r = sim.take_action(a)
             # print(s, a, sp, o, r)
             D[k, i + 1] = '{}{}{}'.format(chr(65 + a), chr(97 + o), chr(48 + rewmap[r]))
